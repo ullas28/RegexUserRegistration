@@ -56,4 +56,22 @@ public class ValidateUserInfo {
             checkEmail();
         }
     }
+
+    // Method Checking Mobile Number with Regex pattern
+    public void checkMobileNumber() {
+        System.out.println("Enter the Mobile Number : ");
+        String mobileNumber = scan.nextLine();
+        // Creating/Defining a pattern to be searched
+        Pattern pattern = Pattern.compile("^[+][0-9]{2}+[ ]?[0-9]{10}$");
+        // matcher searching the above pattern
+        Matcher matcher = pattern.matcher(mobileNumber);
+        // matchFound store true if pattern matches
+        boolean matchFound = matcher.find();
+        if (matchFound) {
+            System.out.println("Mobile Number is valid");
+        } else {
+            System.out.println("Mobile Number is invalid. Enter Again: ");
+            checkMobileNumber();
+        }
+    }
 }
