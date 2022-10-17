@@ -74,4 +74,17 @@ public class ValidateUserInfo {
             checkMobileNumber();
         }
     }
+
+    // Method Checking Password Rule 1 minimum 8 characters
+    public void checkPassword() {
+        System.out.println("Enter the Password : ");
+        String password = scan.nextLine();
+        // Checking pattern with Password
+        if (Pattern.matches("^[A-Za-z]{8,}", password)) {
+            System.out.println("Password is valid");
+        } else {
+            System.out.println("Password is invalid. Enter Again: ");
+            checkPassword();
+        }
+    }
 }
