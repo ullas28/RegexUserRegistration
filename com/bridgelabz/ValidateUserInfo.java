@@ -81,7 +81,7 @@ public class ValidateUserInfo {
         System.out.println("Enter the Password : ");
         String password = scan.nextLine();
         // Checking pattern with Password
-        if (Pattern.matches("^[a-z](?=.*[A-Z])(?=.*[0-9]).{8,}$", password)) {
+        if (Pattern.matches("^[a-z](?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}$", password)) {
             System.out.println("Password is valid");
         } else {
             System.out.println("Password is invalid. Enter Again: ");
