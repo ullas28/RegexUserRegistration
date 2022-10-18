@@ -75,12 +75,13 @@ public class ValidateUserInfo {
         }
     }
 
-    // Method Checking Password Rule 2 atleast one upper case
+    /* Method Checking Password Rules are minimum 8 characters, at least one upper case
+    * at least one numeric*/
     public void checkPassword() {
         System.out.println("Enter the Password : ");
         String password = scan.nextLine();
         // Checking pattern with Password
-        if (Pattern.matches("^[a-z](?=.*[A-Z]).{8,}$", password)) {
+        if (Pattern.matches("^[a-z](?=.*[A-Z])(?=.*[0-9]).{8,}$", password)) {
             System.out.println("Password is valid");
         } else {
             System.out.println("Password is invalid. Enter Again: ");
